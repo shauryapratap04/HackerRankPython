@@ -1,0 +1,11 @@
+def mutate_string(string, position, character):
+    newlist=list(string)
+    newlist[position]=character
+    newlist=''.join(newlist)
+    return newlist
+
+if __name__ == '__main__':
+    s = input()
+    i, c = input().split()
+    s_new = mutate_string(s, int(i), c)
+    print(s_new)
