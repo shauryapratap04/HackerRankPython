@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    n=int(input())
+    studentdetails=[]
+    for i in range(n):
+        name = input()
+        score = float(input())
+        studentdetails.append([name, score])
+    distinctscore=sorted(set([i[1] for i in studentdetails]))
+    #to sort the list by their scores which is at index 1
+    
+    secondlow=distinctscore[1]
+    lowest=[i[0] for i in studentdetails if i[1]==secondlow]
+    #store the names (i[0]) where scores (i[1] is equal to second lowest)
+    
+    lowest.sort()
+    for name in lowest:
+        print(name)
